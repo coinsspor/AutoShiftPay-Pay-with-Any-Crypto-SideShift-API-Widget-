@@ -1,0 +1,15 @@
+[Unit]
+Description=AutoShiftPay Node API Server
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/autoshiftpay/server
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+Environment=NODE_ENV=production
+# load secrets from /var/www/autoshiftpay/server/.env
+
+[Install]
+WantedBy=multi-user.target
