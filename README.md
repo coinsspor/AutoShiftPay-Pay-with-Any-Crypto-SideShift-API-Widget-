@@ -1,7 +1,7 @@
 # AutoShiftPay – Pay with Any Crypto (SideShift API Widget)
 
 <div align="center">
- <img width="1024" height="1024" alt="autoshiftpaylogo" src="https://github.com/user-attachments/assets/a07b55b6-46f6-4a38-959e-fa6795401b54" />
+ <img width="200" height="200" alt="autoshiftpaylogo" src="https://github.com/user-attachments/assets/a07b55b6-46f6-4a38-959e-fa6795401b54" />
 
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
