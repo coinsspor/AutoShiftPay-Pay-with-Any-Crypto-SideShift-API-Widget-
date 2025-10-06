@@ -33,9 +33,8 @@ AutoShiftPay is a **React-based payment widget** that lets *any website accept p
 
 ## 🖼️ Screenshots
 
-<div align="center">
-  <img src="https://github.com/yourusername/autoshiftpay/assets/screenshot.png" alt="AutoShiftPay Interface" width="800"/>
-</div>
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/3dca9dae-1d6c-4e4a-8d7e-fa7aaf5b6736" />
+
 
 ## 🛠️ Tech Stack
 
