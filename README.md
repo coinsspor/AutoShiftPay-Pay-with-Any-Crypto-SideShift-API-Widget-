@@ -1,288 +1,239 @@
-# AutoShiftPay – Pay with Any Crypto (SideShift API Widget)
+# 🚀 AutoShiftPay - Cross-Chain Crypto Swap Platform
 
-<div align="center">
- <img width="200" height="200" alt="autoshiftpaylogo" src="https://github.com/user-attachments/assets/a07b55b6-46f6-4a38-959e-fa6795401b54" />
+![AutoShiftPay](https://img.shields.io/badge/SideShift.ai-Buildathon-00D9FF?style=for-the-badge)
+![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-20-339933?style=for-the-badge&logo=node.js)
 
-  
-  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-  [![Node.js](https://img.shields.io/badge/Node.js-20.x-green)](https://nodejs.org/)
-  [![React](https://img.shields.io/badge/React-18.3-blue)](https://reactjs.org/)
-  [![SideShift API](https://img.shields.io/badge/SideShift-API%20v2-orange)](https://sideshift.ai/api)
-</div>
+**Swap any crypto to any crypto** - A professional, non-custodial cryptocurrency exchange platform powered by SideShift.ai API.
 
-## 🚀 Overview
+🌐 **Live Demo:** [autoshiftpay.coinsspor.com](https://autoshiftpay.coinsspor.com)
 
-AutoShiftPay is a **React-based payment widget** that lets *any website accept payments in any cryptocurrency*. Built for the SideShift.ai Buildathon, it integrates seamlessly with the **SideShift API** to enable instant cross-chain swaps, allowing merchants to receive payments in their preferred cryptocurrency regardless of what the customer wants to pay with.
-
-### 🎯 Key Value Proposition
-- **Accept 200+ cryptocurrencies** across 40+ blockchain networks
-- **Receive in your preferred asset** - automatic conversion handled by SideShift
-- **Zero private key exposure** - all sensitive operations on server-side
-- **Instant deployment** - works out of the box with demo mode
+---
 
 ## ✨ Features
 
-- 🔄 **Cross-Chain Swaps**: Accept any crypto, receive in your preferred asset
-- 🎨 **Modern UI**: Animated React interface with Tailwind CSS
-- 🔐 **Secure Architecture**: Server-side API key management, no client-side secrets
-- 📱 **QR Code Generation**: Instant payment QR codes for mobile wallets
-- 👛 **Wallet Integration**: MetaMask and Keplr wallet detection (optional)
-- ⚡ **Real-time Quotes**: Live exchange rates from SideShift API
-- 🧪 **Demo Mode**: Test without API credentials using mock data
-- 🌐 **Production Ready**: Nginx + PM2 deployment configurations included
+### 🎯 Core Functionality
+- **195+ Cryptocurrencies** - Support for all major coins and tokens
+- **40+ Networks** - Multi-chain support (Ethereum, BSC, Polygon, Arbitrum, Optimism, etc.)
+- **Fixed Rate Swaps** - Lock in rates for up to 15 minutes
+- **Real-time Status Tracking** - Live updates every 10 seconds
+- **QR Code Generation** - Easy mobile deposits
+- **One-Click Copy** - Quick address copying
 
-## 🖼️ Screenshots
+### 💎 Advanced Features
+- **Wallet Integration** - RainbowKit with MetaMask, WalletConnect, Coinbase Wallet
+- **Quote Expiration Timer** - Visual countdown for fixed rates
+- **Refund Address** - Optional safety net for failed transactions
+- **Status Badges** - Clear visual indicators (waiting/processing/settled/refund/expired)
+- **Toast Notifications** - Real-time feedback for user actions
+- **Network Selection** - Granular control over deposit and settlement networks
 
-<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/3dca9dae-1d6c-4e4a-8d7e-fa7aaf5b6736" />
+### 🎨 UI/UX
+- **Modern Design** - Glass morphism and gradient effects
+- **Animated Background** - Interactive particle system
+- **Fully Responsive** - Optimized for mobile and desktop
+- **Dark Theme** - Easy on the eyes
+- **Smooth Animations** - Powered by Framer Motion
 
+---
 
-## 🛠️ Tech Stack
-
-- **Frontend**: React 18, Vite, Tailwind CSS, Framer Motion
-- **Backend**: Node.js, Express.js
-- **API Integration**: SideShift API v2
-- **Deployment**: PM2, Nginx, Let's Encrypt SSL
-- **Tools**: QRCode generation, Real-time status polling
-
-## 📦 Project Structure
-
+## 🏗️ Architecture
 ```
-autoshiftpay/
-├── frontend/               # React + Vite frontend
+autoshiftpay-professional/
+├── frontend/              # React + Vite frontend
 │   ├── src/
-│   │   ├── App.jsx        # Main application component
-│   │   └── index.css      # Tailwind styles
-│   ├── public/
-│   │   └── logo.png       # AutoShiftPay logo
+│   │   ├── App.jsx       # Main application component
+│   │   └── index.css     # Tailwind CSS styles
+│   ├── public/           # Static assets
 │   └── package.json
-├── server/                 # Express.js backend
-│   ├── server.js          # API proxy server
-│   ├── .env.example       # Environment variables template
-│   └── package.json
-├── deploy/                 # Deployment configurations
-│   ├── nginx_autoshiftpay.conf
-│   └── shiftpay-server.service
-└── README.md
+│
+└── server/               # Express.js backend
+    ├── server.js         # API server
+    ├── .env.example      # Environment variables template
+    └── package.json
 ```
+
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 20.x or higher
+- Node.js 20+
 - npm or yarn
-- SideShift API credentials (optional for live mode)
+- SideShift.ai account (for API access)
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/autoshiftpay.git
+git clone https://github.com/YOUR_USERNAME/autoshiftpay.git
 cd autoshiftpay
 ```
 
-### 2. Install Dependencies
-
-**Backend Setup:**
+### 2. Backend Setup
 ```bash
 cd server
 npm install
+
+# Create .env file from example
 cp .env.example .env
+
+# Edit .env with your credentials
+nano .env
 ```
 
-**Frontend Setup:**
+**Required Environment Variables:**
+```env
+PORT=4455
+SIDESHIFT_BASE=https://sideshift.ai/api/v2
+SIDESHIFT_SECRET=your_sideshift_secret_key
+AFFILIATE_ID=your_affiliate_id
+```
+
+### 3. Frontend Setup
 ```bash
 cd ../frontend
 npm install
-cp .env.example .env
 ```
 
-### 3. Configure Environment Variables
+### 4. Run Development Servers
 
-#### Backend (`server/.env`)
-```env
-PORT=4444
-SIDESHIFT_BASE=https://sideshift.ai/api/v2
-SIDESHIFT_SECRET=YOUR_SIDESHIFT_SECRET    # Optional - runs in mock mode if not set
-AFFILIATE_ID=YOUR_AFFILIATE_ID            # Your SideShift account ID
-
-# Merchant receive addresses (examples)
-MERCHANT_BTC=bc1qexample000000000000000000000000000000
-MERCHANT_ETH=0x0000000000000000000000000000000000000000
-MERCHANT_SOL=FzExampleSolanaAddressExample1111111111111
-MERCHANT_USDT_NETWORK=ERC20
-MERCHANT_USDT_ADDRESS=0x0000000000000000000000000000000000000000
-
-DOMAIN=autoshiftpay.yourdomain.com
-```
-
-#### Frontend (`frontend/.env`)
-```env
-VITE_API_BASE=http://localhost:4444/api
-VITE_BRAND_NAME=AutoShiftPay
-VITE_DEFAULT_RECEIVE_ASSET=BTC
-VITE_DEFAULT_RECEIVE_ADDRESS=bc1qexample000000000000000000000000000000
-VITE_DOMAIN=localhost
-VITE_DEV_PORT=5518
-```
-
-### 4. Run in Development Mode
-
-**Start the backend server:**
+**Backend:**
 ```bash
 cd server
-npm run dev   # Runs on http://localhost:4444
+npm start
+# or with PM2
+pm2 start server.js --name autoshiftpay-server
 ```
 
-**Start the frontend dev server:**
+**Frontend:**
 ```bash
 cd frontend
-npm run dev   # Runs on http://localhost:5518
+npm run dev
 ```
 
-Visit `http://localhost:5518` to see the application.
+Visit: `http://localhost:5173`
 
-## 🔄 Usage Flow
+---
 
-1. **Configure Payment**
-   - Select the cryptocurrency the customer will pay with
-   - Choose the cryptocurrency you want to receive
-   - Enter the payment amount
+## 📦 Production Deployment
 
-2. **Get Quote**
-   - Click "Get Quote" to fetch real-time exchange rates
-   - Review the estimated amount you'll receive
+### Using PM2
 
-3. **Create Payment**
-   - Click "Create Payment" to generate a deposit address
-   - QR code appears for easy mobile wallet scanning
-
-4. **Complete Transaction**
-   - Customer sends payment to the displayed address
-   - SideShift handles the swap automatically
-   - You receive funds in your preferred cryptocurrency
-
-## 🔐 API Integration
-
-### Mock Mode (Default)
-The application starts in mock mode, perfect for testing without API credentials:
-- Returns simulated quotes and addresses
-- No real transactions are processed
-- Ideal for UI/UX development and demos
-
-### Live Mode
-To enable live transactions:
-
-1. Get your SideShift API credentials:
-   - Visit [SideShift.ai](https://sideshift.ai)
-   - Create an account and navigate to API settings
-   - Copy your Private Key (used as `x-sideshift-secret`)
-   - Copy your Account ID (used as `affiliateId`)
-
-2. Update `server/.env`:
-   ```env
-   SIDESHIFT_SECRET=your_actual_secret_key
-   AFFILIATE_ID=your_account_id
-   ```
-
-3. Restart the backend server
-
-## 🌐 Production Deployment
-
-### Using PM2 and Nginx
-
-1. **Build Frontend:**
-   ```bash
-   cd frontend
-   npm run build
-   ```
-
-2. **Configure PM2:**
-   ```javascript
-   // ecosystem.config.js
-   module.exports = {
-     apps: [{
-       name: "autoshiftpay-api",
-       script: "server.js",
-       cwd: "/path/to/server",
-       env: {
-         NODE_ENV: "production",
-         PORT: "4444"
-       }
-     }]
-   }
-   ```
-
-3. **Start with PM2:**
-   ```bash
-   pm2 start ecosystem.config.js
-   pm2 save
-   pm2 startup
-   ```
-
-4. **Configure Nginx:**
-   ```nginx
-   server {
-       listen 80;
-       server_name autoshiftpay.yourdomain.com;
-       
-       root /path/to/frontend/dist;
-       index index.html;
-       
-       location / {
-           try_files $uri $uri/ /index.html;
-       }
-       
-       location /api/ {
-           proxy_pass http://127.0.0.1:4444/api/;
-           proxy_http_version 1.1;
-           proxy_set_header Host $host;
-           proxy_set_header X-Real-IP $remote_addr;
-       }
-   }
-   ```
-
-5. **Enable SSL with Let's Encrypt:**
-   ```bash
-   certbot --nginx -d autoshiftpay.yourdomain.com
-   ```
-
-## 🧪 API Endpoints
-
-### Health Check
+**Backend:**
+```bash
+cd server
+pm2 start server.js --name autoshiftpay-server
 ```
-GET /api/health
-```
-Returns: `{"ok": true, "mode": "mock" | "live"}`
 
-### Get Quote
+**Frontend (build first):**
+```bash
+cd frontend
+npm run build
+pm2 serve dist 5173 --name autoshiftpay-frontend --spa
 ```
-GET /api/quote?depositAsset=ETH&settleAsset=BTC&amount=0.05
-```
-Returns quote with exchange rate and estimated settlement amount
 
-### Create Shift
-```
-POST /api/shift
-Body: { "quoteId": "...", "settleAddress": "..." }
-```
-Returns deposit address and shift details
+### Nginx Configuration
+```nginx
+server {
+    listen 443 ssl http2;
+    server_name your-domain.com;
 
-### Check Shift Status
+    location /api {
+        proxy_pass http://localhost:4455;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location / {
+        proxy_pass http://localhost:5173;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
 ```
-GET /api/shifts/:id
-```
-Returns current status of the shift
 
-## 🎨 Customization
+---
 
-### Branding
-- Update `VITE_BRAND_NAME` in frontend `.env`
-- Replace `public/logo.png` with your logo
-- Modify colors in `tailwind.config.js`
+## 🔧 API Endpoints
 
-### Supported Assets
-Edit the asset arrays in `frontend/src/App.jsx`:
+### Backend API
+- `GET /api/health` - Health check
+- `GET /api/coins` - Get all supported coins
+- `POST /api/quote` - Create a quote
+- `POST /api/shift/fixed` - Create fixed rate shift
+- `GET /api/shifts/:id` - Get shift status
+
+### Example Quote Request
 ```javascript
-{["BTC","ETH","SOL","USDT","USDC","XMR","BCH","LTC"].map(...)}
+POST /api/quote
+Content-Type: application/json
+
+{
+  "depositCoin": "btc",
+  "depositNetwork": "bitcoin",
+  "settleCoin": "eth",
+  "settleNetwork": "ethereum",
+  "depositAmount": "0.001"
+}
 ```
+
+---
+
+## 🎯 How It Works
+
+1. **Select Coins & Networks** - Choose what you're sending and receiving
+2. **Get Quote** - Request a real-time exchange rate (valid for 15 minutes)
+3. **Create Shift** - Lock in the rate and get a deposit address
+4. **Send Crypto** - Transfer the exact amount to the provided address
+5. **Receive** - Get your swapped crypto automatically
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React 18.3** - UI framework
+- **Vite 5** - Build tool
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **RainbowKit** - Wallet connection
+- **Wagmi** - Ethereum interactions
+- **Lucide React** - Icons
+- **QRCode** - QR generation
+
+### Backend
+- **Node.js 20** - Runtime
+- **Express** - Web framework
+- **node-fetch** - HTTP client
+- **CORS** - Cross-origin support
+- **dotenv** - Environment variables
+
+---
+
+## 🔒 Security Features
+
+- **Non-custodial** - Never holds user funds
+- **No registration** - Privacy-focused
+- **Refund protection** - Optional refund addresses
+- **Rate limiting** - DDoS protection
+- **HTTPS only** - Encrypted connections
+
+---
+
+## 📊 Statistics
+
+- **195+ Supported Coins**
+- **40+ Blockchain Networks**
+- **<5 Minute** Average Swap Time
+- **15 Minute** Quote Validity
+- **24/7** Automated Processing
+
+---
 
 ## 🤝 Contributing
 
@@ -294,31 +245,33 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+---
+
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🏆 SideShift Buildathon Submission
-
-This project was created for the SideShift.ai Buildathon, showcasing the power of the SideShift API for enabling seamless cross-chain cryptocurrency payments.
-
-### Category Submissions
-- 🔄 **Zero UI** - Invisible swaps integrated into payment flows
-- 💰 **DeFi** - Cross-chain payment infrastructure
-- 🤖 **AI + Automation** - Automated swap routing and optimization
-
-## 🔗 Links
-
-- [Live Demo](https://autoshiftpay.coinsspor.com)
-- [SideShift API Documentation](https://docs.sideshift.ai/)
-- [Project Website](https://autoshiftpay.coinsspor.com)
-
-## 📧 Support
-
-For questions or support, please open an issue on GitHub or contact the maintainers.
+This project is built for the **SideShift.ai Buildathon**.
 
 ---
 
-<div align="center">
-  Built with ❤️ for the SideShift.ai Buildathon
-</div>
+## 🙏 Acknowledgments
+
+- **SideShift.ai** - Providing the excellent swap API
+- **RainbowKit** - Wallet connection infrastructure
+- **Tailwind CSS** - Beautiful styling system
+- **React Community** - Amazing ecosystem
+
+---
+
+## 📞 Support
+
+- **Website:** [autoshiftpay.coinsspor.com](https://autoshiftpay.coinsspor.com)
+- **SideShift.ai Docs:** [sideshift.ai/api/docs](https://sideshift.ai/api/docs)
+- **Issues:** [GitHub Issues](https://github.com/YOUR_USERNAME/autoshiftpay/issues)
+
+---
+
+## 🎉 Built for SideShift.ai Buildathon
+
+**Affiliate ID:** FLnzAru50
+
+Made with ❤️ for the crypto community
