@@ -67,7 +67,7 @@ autoshiftpay-professional/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/autoshiftpay.git
+git clone https://github.com/coinsspor/AutoShiftPay-Pay-with-Any-Crypto-SideShift-API-Widget-.git
 cd autoshiftpay
 ```
 
