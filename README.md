@@ -1,6 +1,7 @@
 
 <img width="400" height="400" alt="logo" src="https://github.com/user-attachments/assets/bd0fbd84-a692-46a6-860f-45ee7bf828f2" />
-#  AutoShiftPay - Cross-Chain Crypto Swap Platform
+
+##  AutoShiftPay - Cross-Chain Crypto Swap Platform
 
 ![AutoShiftPay](https://img.shields.io/badge/SideShift.ai-Buildathon-00D9FF?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react)
