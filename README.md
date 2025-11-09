@@ -269,7 +269,7 @@ This project is built for the **SideShift.ai Buildathon**.
 
 - **Website:** [autoshiftpay.coinsspor.com](https://autoshiftpay.coinsspor.com)
 - **SideShift.ai Docs:** [sideshift.ai/api/docs](https://sideshift.ai/api/docs)
-- **Issues:** [GitHub Issues](https://github.com/YOUR_USERNAME/autoshiftpay/issues)
+
 
 ---
 
